@@ -37,10 +37,10 @@
                         },
                         "diskSizeGB": 32
                     },
-                    "dataDisks": [
+                    "dataDisks": [{
                         "lun": 0,
                         "createOption": "empty",
-                    ]
+                    }]
                 },
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_VirtualMachine02_name')]",
