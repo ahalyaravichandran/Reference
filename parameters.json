@@ -5,11 +5,6 @@
         "virtualMachines_VirtualMachine01_name": {
             "value": null
         },
-        "disks_VirtualMachine01_OsDisk_1_eb03187e8f6241208ef8300d6b1ebb7a_externalid": {
-            "value": null
-        },
-        "networkInterfaces_virtualmachine01764_externalid": {
-            "value": null
-        }
+        
     }
 }
