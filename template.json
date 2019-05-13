@@ -5,8 +5,7 @@
         "virtualMachines_VirtualMachine02_name": {
             "defaultValue": "VirtualMachine02",
             "type": "String"
-        },
-        
+        }
     },
     "variables": {},
     "resources": [
@@ -28,12 +27,10 @@
                     },
                     "osDisk": {
                         "osType": "Linux",
-                        
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "StandardSSD_LRS",
-                            
+                            "storageAccountType": "StandardSSD_LRS"
                         },
                         "diskSizeGB": 32
                     },
@@ -51,10 +48,10 @@
                     },
                     "secrets": [],
                     "allowExtensionOperations": true
-                },
-               
-                
+                }
             }
         }
     ]
 }
+
+
