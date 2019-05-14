@@ -13,7 +13,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2018-10-01",
             "name": "[parameters('virtualMachines_VirtualMachine02_name')]",
-            "location": "southindia",
+            "location": "centralindia",
             "properties": {
                 "hardwareProfile": {
                     "vmSize": "Standard_D2_v3"
