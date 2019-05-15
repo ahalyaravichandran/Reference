@@ -1,0 +1,15 @@
+---
+
+- hosts: localhost
+  tasks:
+  - name: Create virtual network
+    azure_rm_virtualnetwork:
+     resource_group: RG_Ahalya
+     name: myVnet
+  - name: Create Azure Deploy
+    azure_rm_deployment:
+     state: present
+     resource_group_name: RG_Ahalya
+     location: centralindia
+     template_link: 'https://github.com/ahalyaravichandran/armtemplate/blob/master/template.json'
+     parameters_link: 'https://github.com/ahalyaravichandran/armtemplate/blob/master/parameters.json'
