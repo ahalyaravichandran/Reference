@@ -4,7 +4,6 @@
     "parameters": {
         "virtualMachines_VirtualMachine02_name": {
             "value": null
-        },
-        
+        }
     }
 }
