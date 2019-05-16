@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "GEN-UNIQUE"
+      "value": "dynamic_vm"
     },
     "adminPasswordOrKey": {
-      "value": "GEN-SSH-PUB-KEY"
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD2KXUGebXkhuE9ZXah402ClFSEdwe3bp94mJUOz1zx5Ty40SC9xwL3UJD3bFJq0NB+hqVOXEU+ViSoLIF8P4F5j5LlEzZM2Bfch2I4Krr+HAxwiI4Flba4ueGW88wSresdLpmxOrPkdrNX5FDesmys0yzoplf05D69fq1IzRCWLmQ5DLr7zKL/wQoK3SKPFgIBUvXaXl6Dlhb0InNLmAtdW8YaN2fP7vj3mu5FiC1GJoKOX4miisxFQQQblSSXVWWfnmimjcGWXgYN3bPT4UeE5Ko9B2P+R5DZvowlTz7/zLoZS85t9Mc4YAwqcFTsBLCh2y4Oj53JLDhTc3BZRk8zbNYBliwhVWpim7F1pmlMudr+uukYWitUCYdoJ9PQODMBMpDs6VKncmfMW9QbH8djKQxkaFCgEFvIRvPrXiVW4z+6cFPZNQjPRUXou7Xui+uk1YSCHjGondph74YhtglHFlnrRZxjDg4qYb5se/M/CRBNA7/c74yC0mq0WKxTeOs6JRW1mmJ4WFC3eAJZRhaEiAoIC1FaNNgNm08HpKE48im1hivaU0I517E2bsiz0E8w8lUkcJyhdGt32k850JFsBlLwSkCU/orD2jYZOIHhEkMIwdIfnF3pbT73xWUuWkjgEjrCsS3Om+N/qCNR1KSDUF1Rx5plWNJoE7FdRieSGw== admin@tecmintlocal.com"
     },
     "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "aep"
     }
   }
 }
