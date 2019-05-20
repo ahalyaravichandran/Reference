@@ -2,14 +2,32 @@
 
 - hosts: localhost
   tasks:
-  - name: Create virtual network
-    azure_rm_virtualnetwork:
-     resource_group: RG_Ahalya
-     name: myVnet
   - name: Create Azure Deploy
     azure_rm_deployment:
      state: present
      resource_group_name: RG_Ahalya
      location: centralindia
-     template_link: 'https://github.com/ahalyaravichandran/armtemplate/blob/master/template.json'
-     parameters_link: 'https://github.com/ahalyaravichandran/armtemplate/blob/master/parameters.json'
+     template:  "{{  lookup('file','/etc/ansible/deployment/testtemplate.json') | from_json }}"
+     parameters:  "{{  (lookup('file','/etc/ansible/deployment/testparameter.json') | from_json).parameters }}"
+- hosts: webservers
+  connection: local
+  remote_user: root
+  vars:
+    NORMAL_USER_NAME: 'dynamic_vm'
+    tomcat_java_home: "/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre"
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: create user
+    user:
+     name: dynamic_vm
+     password: '6$rounds=656000$B7tn8YPjGe3wuRSj$BgDjebevGbI.v7y.wV.Y3ChhecP/K9sTpci69U7fWiPA0wfKgSsoJLmmgHdgddwYjl.XHbpll4kmFLSTyksEM.'
+     state: present
+     createhome: yes
+  - name: copy ssh key
+    authorized_key:
+     user: dynamic_vm
+     state: present
+     key: "{{ lookup('file','/etc/ansible/.ssh/authorized_keys') }}"
+  roles:
+    - tomcat
